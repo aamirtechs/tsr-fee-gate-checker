@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSR Fee Gate Checker: Flag any debt relief fee taken before the FTC Telemarketing Sales Rule three-part test is met for that debt, and check state fee caps on the correct basis</title>
+<meta name="description" content="Flag any debt relief fee taken before the FTC Telemarketing Sales Rule three-part test is met for that debt, and check state fee caps on the correct basis.">
+<meta name="keywords" content="FTC Telemarketing Sales Rule fee checker, debt relief advance fee ban checker, TSR three part test audit, state debt settlement fee cap checker">
+<meta name="author" content="Amir Hussain">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aamirtechs.github.io/tsr-fee-gate-checker/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#0b1f3a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TSR Fee Gate Checker">
+<meta property="og:description" content="Flag any debt relief fee taken before the FTC Telemarketing Sales Rule three-part test is met for that debt, and check state fee caps on the correct basis.">
+<meta property="og:url" content="https://aamirtechs.github.io/tsr-fee-gate-checker/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TSR Fee Gate Checker">
+<meta name="twitter:description" content="Flag any debt relief fee taken before the FTC Telemarketing Sales Rule three-part test is met for that debt, and check state fee caps on the correct basis.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TSR Fee Gate Checker", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Amir Hussain", "url": "https://aamirtechs.com"}, "url": "https://aamirtechs.github.io/tsr-fee-gate-checker/"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>:root{--navy:#0b1f3a;--navy2:#122c50;--gold:#d4a72c;--ink:#16233a;--muted:#5a6a84;--line:#e3e9f2;--bg:#f6f8fb;--card:#ffffff}
+*{box-sizing:border-box}body{margin:0;font-family:'Plus Jakarta Sans',Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:44px 20px 36px;text-align:center}
+header h1{font-family:Sora,Arial,sans-serif;font-size:2rem;margin:0 0 10px}header h1 span{color:var(--gold)}
+header p{max-width:680px;margin:0 auto 14px;color:#dbe4f2}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.stats span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:999px;font-size:.85rem}
+main{max-width:920px;margin:-18px auto 30px;padding:0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 6px 24px rgba(11,31,58,.07)}
+label{display:block;font-weight:700;margin:14px 0 6px;font-size:.92rem}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:130px;font-family:ui-monospace,Menlo,monospace;font-size:.85rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:640px){.row{grid-template-columns:1fr}}
+.btn-run{background:var(--gold);color:var(--navy);border:0;padding:12px 22px;border-radius:9px;font-weight:800;font-size:1rem;cursor:pointer;margin-top:18px}
+.btn-dl{background:var(--navy);color:#fff;border:0;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer;margin:10px 8px 0 0}
+.privacy{color:var(--muted);font-size:.88rem;margin-top:14px}
+.disclaimer{background:#fdf3d7;border:1px solid var(--gold);border-radius:10px;padding:14px;margin-top:16px;font-size:.92rem}
+.msg{margin-top:14px;font-weight:700}.err{color:#b3261e}.pass{color:#137333;font-weight:700}.fail{color:#b3261e;font-weight:700}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.88rem}th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}th{background:#eef3fa}
+section.info{max-width:920px;margin:0 auto 30px;padding:0 16px}section.info h2{font-family:Sora,Arial,sans-serif}
+footer{background:var(--navy);color:#cdd9ec;text-align:center;padding:26px 16px;font-size:.9rem}footer a{color:var(--gold)}
+.kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.kpis div{background:#eef3fa;border-radius:10px;padding:10px 14px;min-width:120px}.kpis strong{display:block;font-size:1.2rem}
+</style>
+</head>
+<body>
+<header><h1>TSR Fee Gate <span>Checker</span></h1><p>Flag any debt relief fee taken before the FTC Telemarketing Sales Rule three-part test is met for that debt, and check state fee caps on the correct basis.</p><div class="stats"><span>Free</span><span>100% in your browser</span><span>No sign-up</span></div></header>
+<main><div class="card">
+<div class="disclaimer"><strong>Disclaimer:</strong> This is a compliance-support tool, not legal advice. It applies the rules and cap data you enter to the rows you provide. Verify the cap table and every flagged row with qualified counsel before acting.</div>
+<label for="file">Upload CSV</label><input id="file" type="file" accept=".csv,text/csv">
+<label for="data">Or paste CSV</label>
+<textarea id="data">consumer_ref,debt_id,creditor,enrolled_debt,settled,settlement_amount,agreement_date,first_payment_date,fee_amount,fee_date,state
+C-001,D-001,Card A,10000,yes,6000,2026-01-10,2026-01-20,500,2026-02-01,WA
+C-002,D-002,Card B,8000,no,,2026-01-10,,900,2026-01-15,IL
+C-003,D-003,Loan C,12000,yes,7000,2026-02-01,2026-02-10,900,2026-02-05,CT</textarea>
+<label for="caps">Per-state fee caps (JSON, editable reference data, verify before use)</label>
+<textarea id="caps" style="min-height:90px">{"WA": {"capPercent": 15, "basis": "enrolled"}, "IL": {"capPercent": 15, "basis": "savings"}, "CT": {"capPercent": 10, "basis": "savings"}}</textarea>
+<p>Seed examples are public-source reference values only: WA 15% of enrolled debt, IL 15% of savings, CT 10% of savings. Edit them to match counsel-verified rules for your program. The basis matters: percent of enrolled debt and percent of savings produce different limits.</p>
+<button class="btn-run" id="run">Check fees</button>
+<p class="privacy">Runs 100% in your browser. Your files never leave this device.</p>
+<div class="msg" id="msg"></div><div id="results"></div>
+</div></main>
+<section class="info"><h2>How it works</h2><ul>
+<li>Paste or upload enrollment, settlement and fee rows, one row per debt.</li>
+<li>For each debt the tool checks settlement, the written agreement date, and the first payment date against the fee date.</li>
+<li>It then applies the state cap on its stated basis, enrolled debt or savings, and never mixes the two.</li>
+<li>Download the audit CSV with pass or fail and the exact failed conditions for every debt.</li>
+</ul></section>
+<footer>
+<p>Built by Amir Hussain, operations manager and founder of <a href="https://aamirtechs.com" target="_blank" rel="noopener">AamirTechs: operations, customer support and e-commerce services</a>.</p>
+<p><a href="https://github.com/aamirtechs" target="_blank" rel="noopener">More open source tools on GitHub</a></p>
+</footer>
+<script src="src/logic.js"></script>
+<script>
+function download(n,t){var b=new Blob([t],{type:"text/csv;charset=utf-8"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},500);}
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+var L=window.TsrFeeGateChecker,last=null;
+document.getElementById("file").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){document.getElementById("data").value=r.result;};r.readAsText(f);});
+document.getElementById("run").addEventListener("click",function(){
+ var msg=document.getElementById("msg"),res=document.getElementById("results");msg.textContent="";res.innerHTML="";
+ var caps;try{caps=L.parseCaps(document.getElementById("caps").value);}catch(e){msg.textContent="Cap table is not valid JSON.";msg.className="msg err";return;}
+ var parsed=L.parseRows(document.getElementById("data").value);if(!parsed.rows.length){msg.textContent="No usable rows found.";msg.className="msg err";return;}
+ var out=L.evaluateAll(parsed.rows,caps);last=out.results;var s=out.summary;
+ var html='<div class="kpis"><div><strong>'+s.total+'</strong>debts</div><div><strong>'+s.pass+'</strong>pass</div><div><strong>'+s.fail+'</strong>fail</div><div><strong>$'+s.flaggedFees+'</strong>flagged fees</div></div>';
+ html+="<table><tr><th>Consumer</th><th>Debt</th><th>Creditor</th><th>State</th><th>Status</th><th>Failed conditions</th><th>Fee</th><th>Cap limit</th></tr>";
+ out.results.forEach(function(r){html+="<tr><td>"+esc(r.consumer_ref)+"</td><td>"+esc(r.debt_id)+"</td><td>"+esc(r.creditor)+"</td><td>"+esc(r.state)+"</td><td class='"+r.status+"'>"+r.status+"</td><td>"+esc(r.failures.join("; "))+"</td><td>"+esc(r.fee_amount)+"</td><td>"+(r.capLimit==null?"":r.capLimit+" ("+esc(r.capBasis)+")")+"</td></tr>";});
+ html+="</table><button class='btn-dl' id='dl'>Download audit CSV</button>";res.innerHTML=html;
+ document.getElementById("dl").addEventListener("click",function(){download("tsr-fee-gate-audit.csv",L.buildAuditCSV(last));});
+ msg.textContent="Checked "+s.total+" debts.";
+});
+</script></body></html>
